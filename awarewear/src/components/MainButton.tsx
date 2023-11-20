@@ -22,7 +22,11 @@ export default function MainButton({
         width={200}
         height={200}
         alt="icon"
-        className={`absolute z-40 bottom-0 ${imagePosition}-0 rounded-bl-3xl w-32`}
+        className={twMerge(
+          `absolute z-40 bottom-0   w-32`,
+          `${imagePosition}-0`,
+          imagePosition == "left" ? "rounded-bl-3xl" : "rounded-br-3xl"
+        )}
       />
       <Link
         href={link}
