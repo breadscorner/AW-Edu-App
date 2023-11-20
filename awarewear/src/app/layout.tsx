@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Sen } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Image from "next/image";
+import { twMerge } from "tailwind-merge";
+import Link from "next/link";
 
 const sen = Sen({ subsets: ["latin"] });
 
@@ -16,8 +19,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="w-full max-w-md m-auto h-full">
-      <body className={`${sen.className} w-full relative h-full`}>
+    <html lang="en" className="w-full h-full">
+      <body
+        className={twMerge(sen.className, "m-auto h-full max-w-md relative")}
+      >
+        <header className="w-full h-16 bg-white absolute">
+          <Link href="/main">
+            <Image
+              src="/logo.png"
+              alt="logo"
+              width={80}
+              height={80}
+              className="absolute top-0 left-0 w-16 h-16"
+            />
+          </Link>
+        </header>
         <Navbar />
         {children}
       </body>
