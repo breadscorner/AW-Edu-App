@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Sen } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 
 const sen = Sen({ subsets: ["latin"] });
 
@@ -15,8 +16,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="w-full h-full">
-      <body className={`${sen.className} w-full h-full`}>{children}</body>
+    <html lang="en" className="w-full max-w-md m-auto h-full">
+      <body className={`${sen.className} w-full relative h-full`}>
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
