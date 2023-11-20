@@ -63,7 +63,7 @@ export default function Navbar() {
         )}
       >
         <Image
-          src="/map.svg"
+          src="/stores.svg"
           alt="map icon"
           width={35}
           height={35}
