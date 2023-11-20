@@ -11,6 +11,9 @@ const config: Config = {
     extend: {
       colors: {
         "dark-midnight-blue": "#003366",
+        "goldenrod-color": "#DAA520",
+        "kadet-blue": "#5DA399",
+        "light-coral": "#FF6B6B",
       },
     },
     screens: {
