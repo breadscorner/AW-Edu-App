@@ -1,0 +1,102 @@
+[
+  {
+    "question": "What is the primary goal of fast fashion?",
+    "options": {
+      "A": "Create durable clothing",
+      "B": "Promote sustainable practices",
+      "C": "Produce clothing quickly and cheaply",
+      "D": "Increase the use of organic materials"
+    },
+    "answer": "C"
+  },
+  {
+    "question": "Which industry is the second-largest consumer of water worldwide?",
+    "options": {
+      "A": "Agriculture",
+      "B": "Electronics",
+      "C": "Fashion",
+      "D": "Automobiles"
+    },
+    "answer": "C"
+  },
+  {
+    "question": "How much water is typically required to produce a single cotton t-shirt?",
+    "options": {
+      "A": "100 liters",
+      "B": "500 liters",
+      "C": "1,000 liters",
+      "D": "2,700 liters"
+    },
+    "answer": "D"
+  },
+  {
+    "question": "Which of the following is NOT an environmental impact of fast fashion?",
+    "options": {
+      "A": "Waste accumulation in landfills",
+      "B": "Air purification",
+      "C": "Water pollution",
+      "D": "Increased carbon footprint"
+    },
+    "answer": "B"
+  },
+  {
+    "question": "Where do most fast fashion brands manufacture their clothing?",
+    "options": {
+      "A": "Developed countries with strict labor laws",
+      "B": "Developing countries with lax labor regulations",
+      "C": "In-house factories",
+      "D": "Small local artisans"
+    },
+    "answer": "B"
+  },
+  {
+    "question": "What is a common criticism of fast fashion regarding labor practices?",
+    "options": {
+      "A": "High wages for workers",
+      "B": "Overstaffing in factories",
+      "C": "Use of skilled artisans",
+      "D": "Poor working conditions and low wages"
+    },
+    "answer": "D"
+  },
+  {
+    "question": "Which material is frequently used in fast fashion due to its low cost but is criticized for being environmentally harmful?",
+    "options": {
+      "A": "Organic Cotton",
+      "B": "Polyester",
+      "C": "Silk",
+      "D": "Linen"
+    },
+    "answer": "B"
+  },
+  {
+    "question": "Fast fashion contributes to which of the following environmental issues?",
+    "options": {
+      "A": "Reduced pesticide use",
+      "B": "Increased biodiversity",
+      "C": "Microfiber pollution in oceans",
+      "D": "Decreased carbon emissions"
+    },
+    "answer": "C"
+  },
+  {
+    "question": "What is a sustainable alternative to fast fashion?",
+    "options": {
+      "A": "Buying only designer clothes",
+      "B": "Purchasing second-hand or vintage clothing",
+      "C": "Using synthetic materials",
+      "D": "Frequent wardrobe updates"
+    },
+    "answer": "B"
+  },
+  {
+    "question": "How does fast fashion typically affect the lifecycle of clothing?",
+    "options": {
+      "A": "Increases the durability and longevity of clothes",
+      "B": "Encourages the reuse and recycling of garments",
+      "C": "Leads to a trend of disposable, short-lived clothing",
+      "D": "Promotes repair and maintenance of clothes"
+    },
+    "answer": "C"
+  }
+]
