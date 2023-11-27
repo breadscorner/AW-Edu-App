@@ -30,7 +30,7 @@ export default function RootLayout({
               alt="logo"
               width={80}
               height={80}
-              className="absolute top-0 left-0 w-16 h-16"
+              className="absolute top-0 left-0 z-50 w-16 h-16"
             />
           </Link>
         </header>
