@@ -9,14 +9,21 @@ type GreenLabel = {
   priceRange: string;
   values: string[];
   link: string;
+  image: string;
 };
 
 export default function GreenLabelTile({ label }: { label: GreenLabel }) {
   return (
-    <Link href={label.link}>
-      <div className="flex items-center justify-between w-full min-h-fit flex-col xs:flex-row xs:h-36 p-2 mb-8 bg-white border-1 border-gray-200 rounded-md shadow-md hover:bg-gray-100">
+    <Link href={label.link} target="_blank">
+      <div className="flex items-center justify-between w-full min-h-fit flex-row h-36 p-2 mb-8 bg-white border border-gray-200 rounded-md shadow-md hover:bg-gray-100">
         <div className="flex items-center justify-center w-1/3 mr-4 rounded">
-          <Image src="/logo.png" width={40} height={40} alt="logo" />
+          <Image
+            src={`/logos/${label.image}`}
+            width={80}
+            height={80}
+            alt="logo"
+            className="rounded"
+          />
         </div>
         <div className="flex flex-col justify-evenly h-full w-2/3">
           <h2 className="text-lg font-bold ">{label.storeName}</h2>
