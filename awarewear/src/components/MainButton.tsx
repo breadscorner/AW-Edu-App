@@ -15,17 +15,19 @@ export default function MainButton({
   link: string;
   imagePosition: string;
 }) {
+
+  const commonHeight = 150; 
+
   return (
     <div className="flex flex-col w-full h-44 items-center justify-end relative ">
       <Image
         src={imageSource}
-        width={200}
-        height={200}
+        width={imagePosition === "left" ? commonHeight * (4 / 3) : commonHeight}
+        height={commonHeight} 
         alt="icon"
         className={twMerge(
-          `absolute z-40 bottom-0   w-32`,
-          `${imagePosition}-0`,
-          imagePosition == "left" ? "rounded-bl-3xl" : "rounded-br-3xl"
+          `absolute z-40 bottom-0`,
+          imagePosition === "left" ? "left-0 rounded-bl-3xl" : "right-0 rounded-br-3xl"
         )}
       />
       <Link
@@ -33,7 +35,7 @@ export default function MainButton({
         className={twMerge(
           "px-10 py-5 flex w-full h-3/4 rounded-3xl text-white",
           backgroundColor,
-          imagePosition == "left" ? "justify-end" : "justify-start"
+          imagePosition === "left" ? "justify-end" : "justify-start"
         )}
       >
         <div className="flex items-center w-1/2 font-bold">

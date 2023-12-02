@@ -3,7 +3,7 @@ import MainButton from "@/components/MainButton";
 export default function Main() {
   return (
     <main className="w-full h-full p-6">
-      <div className="pb-20 py-6 flex flex-col items-center justify-center w-full">
+      <div className="pb-20 py-6 flex flex-col items-center justify-center w-full mt-10">
         <MainButton
           backgroundColor="bg-light-coral"
           text="Learn About Fast Fashion"

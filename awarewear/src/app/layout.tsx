@@ -25,15 +25,24 @@ export default function RootLayout({
       >
         <header className="w-full h-16 bg-white absolute">
           <Link href="/main">
-            <Image
-              src="/logo.png"
-              alt="logo"
-              width={80}
-              height={80}
-              className="absolute top-0 left-0 z-50 w-16 h-16"
-            />
+            <div className="flex justify-center items-center h-full px-4">
+              <div className="flex items-center">
+                <Image
+                  src="/AW3.png"
+                  alt="logo"
+                  width={80}
+                  height={80}
+                  className="w-16 h-16 mr-4"
+                />
+                <h1 className="text-2xl">AwareWear</h1>
+              </div>
+              <div className="w-16 h-16 invisible">
+                {/* Invisible spacer div */}
+              </div>
+            </div>
           </Link>
         </header>
+
         <Navbar />
         {children}
       </body>

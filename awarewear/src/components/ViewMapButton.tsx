@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export default function ViewMapButton() {
   return (
-    <Link className="absolute top-4 right-4 z-50 " href="/map">
-      <div className="flex items-center justify-center px-4 py-2 border  border-gray-400 rounded-lg shadow-md hover:bg-gray-300">
+    <Link href="/map">
+      <div className="flex items-center justify-center px-4 py-2 border w-[50%] mx-auto border-gray-400 rounded-lg shadow-md hover:bg-gray-300">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
