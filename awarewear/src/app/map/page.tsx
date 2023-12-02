@@ -1,3 +1,5 @@
+"use client"
+
 import "mapbox-gl/dist/mapbox-gl.css";
 import MapComponent from "@/components/MapComponent";
 
