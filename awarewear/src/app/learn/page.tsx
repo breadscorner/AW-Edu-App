@@ -10,7 +10,7 @@ export default function Learn() {
         style={{
           backgroundImage: bg,
           backgroundColor: "rgba(255, 255, 255, 0.1)",
-          transform: "rotate(-12.49deg)",
+          // transform: "rotate(-12.49deg)",
           opacity: 0.1,
           zIndex: -1, // To place the pseudo-element behind the content
         }}
