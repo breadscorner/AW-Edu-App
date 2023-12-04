@@ -1,4 +1,5 @@
 import MainButton from "@/components/MainButton";
+import Navbar from "@/components/Navbar";
 
 export default function Main() {
   const bg = "url('/learnbg.png')";
@@ -37,6 +38,7 @@ export default function Main() {
           imagePosition="right"
         />
       </div>
+      <Navbar />
     </main>
   );
 }

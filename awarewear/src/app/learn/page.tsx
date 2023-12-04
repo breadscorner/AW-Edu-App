@@ -1,4 +1,5 @@
 import LearnButton from "@/components/LearnButton";
+import Navbar from "@/components/Navbar";
 
 export default function Learn() {
   const bg = "url('/learnbg.png')";
@@ -24,6 +25,7 @@ export default function Learn() {
       <div className="flex justify-center items-center h-full">
         <LearnButton />
       </div>
+      <Navbar />
     </div>
   );
 }

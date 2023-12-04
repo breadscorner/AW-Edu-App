@@ -15,10 +15,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  showNavbar = true,
 }: {
   children: React.ReactNode;
-  showNavbar?: boolean;
 }) {
   return (
     <html lang="en" className="w-full h-full">
@@ -42,8 +40,6 @@ export default function RootLayout({
             </div>
           </Link>
         </header>
-
-        {showNavbar && <Navbar />}
         {children}
       </body>
     </html>

@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import QuestionButton from "@/components/QuestionButton";
 import quizData from "./fastFashionQuiz.json";
+import Navbar from "@/components/Navbar";
 
 export default function QuizStart() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -133,6 +134,7 @@ export default function QuizStart() {
             }
           )}
         </div>
+        <Navbar />
       </main>
     </>
   );

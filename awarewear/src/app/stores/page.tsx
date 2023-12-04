@@ -1,6 +1,7 @@
 import GreenLabelTile from "@/components/GreenLabelTile";
 import greenLabels from "../green-labels.json";
 import ViewMapButton from "@/components/ViewMapButton";
+import Navbar from "@/components/Navbar";
 
 export default function GreenLabels() {
   const bg = "url('/learnbg.png')";
@@ -30,6 +31,7 @@ export default function GreenLabels() {
           ))}
         </div>
       </div>
+      <Navbar />
     </main>
   );
 }

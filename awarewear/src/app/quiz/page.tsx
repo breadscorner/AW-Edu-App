@@ -1,3 +1,4 @@
+import Navbar from "@/components/Navbar";
 import QuizStartButton from "@/components/QuizStartButton";
 
 export default function Quiz() {
@@ -23,6 +24,7 @@ export default function Quiz() {
       <div className="flex justify-center items-center h-full">
         <QuizStartButton />
       </div>
+      <Navbar />
     </div>
   );
 }

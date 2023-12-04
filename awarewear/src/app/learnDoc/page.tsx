@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import learn from "./learn.json";
+import Navbar from "@/components/Navbar";
 
 export default function LearnPage() {
   const [currentContentIndex, setCurrentContentIndex] = useState(0);
@@ -47,6 +48,7 @@ export default function LearnPage() {
             </button>
           </div>
         </div>
+        <Navbar />
       </main>
     </>
   );
