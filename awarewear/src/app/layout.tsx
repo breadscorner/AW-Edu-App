@@ -15,8 +15,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  showNavbar = true,
 }: {
   children: React.ReactNode;
+  showNavbar?: boolean;
 }) {
   return (
     <html lang="en" className="w-full h-full">
@@ -36,14 +38,12 @@ export default function RootLayout({
                 />
                 <h1 className="text-2xl">AwareWear</h1>
               </div>
-              <div className="w-16 h-16 invisible">
-                {/* Invisible spacer div */}
-              </div>
+              <div className="w-16 h-16 invisible"></div>
             </div>
           </Link>
         </header>
 
-        <Navbar />
+        {showNavbar && <Navbar />}
         {children}
       </body>
     </html>
