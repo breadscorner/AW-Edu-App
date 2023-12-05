@@ -84,6 +84,7 @@ export default function QuizStart() {
             borderRadius: "5px",
             cursor: "pointer",
           }}
+          className="bg-blue-500 text-white rounded-xl"
         >
           Try Again
         </button>
