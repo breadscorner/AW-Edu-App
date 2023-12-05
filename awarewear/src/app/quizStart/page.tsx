@@ -96,35 +96,33 @@ export default function QuizStart() {
   return (
     <>
       <main className="relative w-full h-screen bg-no-repeat bg-cover overflow-hidden">
-        {/* Background image and content code */}
         <div className="relative z-10 flex flex-col items-center justify-center h-full space-y-4">
           <QuestionButton
             questionText={currentQuestion.question}
             href=""
-            className="text-2xl font-bold text-center text-blue-800 bg-transparent"
+            className="top-0 text-2xl font-bold text-center text-blue-800 bg-transparent"
           />
-
           {Object.entries(currentQuestion.options).map(
             ([key, value], index) => {
               const isSelected = key === selectedAnswer;
               const isCorrectAnswer = key === currentQuestion.answer;
-              let buttonStyles = "bg-blue-500"; // Default style
+              let buttonStyles = "flex items-center justify-center bg-blue-500 w-full text-lg h-20"; // Default button style
 
               if (isSelected) {
-                buttonStyles = isCorrectAnswer ? "bg-green-500" : "bg-red-500";
+                buttonStyles += isCorrectAnswer ? " bg-green-500" : " bg-red-500";
               }
 
               return (
-                <div key={index} className="relative">
+                <div key={index} className="mx-4 w-full relative">
                   <QuestionButton
                     questionText={value}
                     onClick={() => handleAnswerClick(key)}
-                    className={`px-6 py-3 rounded-full text-white font-semibold ${buttonStyles}`}
+                    className={`rounded-full text-white font-semibold ${buttonStyles}`}
                     href=""
                   />
                   {isSelected && (
                     <div
-                      className={`absolute -right-20 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-lg shadow-lg ${isWrongAnswer ? "text-red-500" : "text-green-500"
+                      className={`absolute -top-14 left-1/2 transform -translate-x-1/2 bg-white p-2 rounded-lg shadow-lg ${isWrongAnswer ? "text-red-500" : "text-green-500"
                         }`}
                     >
                       {isWrongAnswer ? "Wrong Answer" : "Correct!"}
@@ -137,5 +135,5 @@ export default function QuizStart() {
         </div>
       </main>
     </>
-  );
+  )
 }
