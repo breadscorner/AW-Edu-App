@@ -87,6 +87,8 @@ export default function QuizStart() {
         >
           Try Again
         </button>
+        {/* Render Navbar only if quiz is complete */}
+        {quizComplete && <Navbar />}
       </div>
     );
   }
@@ -122,9 +124,8 @@ export default function QuizStart() {
                   />
                   {isSelected && (
                     <div
-                      className={`absolute -right-20 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-lg shadow-lg ${
-                        isWrongAnswer ? "text-red-500" : "text-green-500"
-                      }`}
+                      className={`absolute -right-20 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-lg shadow-lg ${isWrongAnswer ? "text-red-500" : "text-green-500"
+                        }`}
                     >
                       {isWrongAnswer ? "Wrong Answer" : "Correct!"}
                     </div>
@@ -134,7 +135,6 @@ export default function QuizStart() {
             }
           )}
         </div>
-        <Navbar />
       </main>
     </>
   );
