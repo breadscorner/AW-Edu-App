@@ -1,4 +1,5 @@
-"use client";
+'use client'
+
 import React, { useState } from "react";
 import learn from "./learn.json";
 import Navbar from "@/components/Navbar";
@@ -33,19 +34,26 @@ export default function LearnPage() {
             {currentContent.contents}
           </div>
 
-          <div className="flex justify-between w-full">
-            <button
-              onClick={handlePrevClick}
-              className="px-6 py-3 rounded-full text-white font-semibold bg-gray-500"
-            >
-              Prev
-            </button>
-            <button
-              onClick={handleNextClick}
-              className="px-6 py-3 rounded-full text-white font-semibold bg-green-500"
-            >
-              Next
-            </button>
+          <div className="flex justify-center space-x-2 w-full">
+            {/* Render Prev button conditionally */}
+            {currentContentIndex > 0 && (
+              <button
+                onClick={handlePrevClick}
+                className="px-6 py-3 rounded-full text-white font-semibold bg-gray-500"
+              >
+                Prev
+              </button>
+            )}
+
+            {/* Render Next button conditionally */}
+            {currentContentIndex < learn.length - 1 && (
+              <button
+                onClick={handleNextClick}
+                className="px-6 py-3 rounded-full text-white font-semibold bg-green-500"
+              >
+                Next
+              </button>
+            )}
           </div>
         </div>
         <Navbar />
