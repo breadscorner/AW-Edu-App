@@ -10,13 +10,13 @@ export default function Quiz() {
         style={{
           backgroundImage: bg,
           backgroundColor: "rgba(255, 255, 255, 0.1)",
-          // transform: "rotate(-12.49deg)",
+
           opacity: 0.1,
-          zIndex: -1, // To place the pseudo-element behind the content
+          zIndex: -1, 
         }}
       />
       <h1
-        className="text-4xl font-bold font-sen leading-10 "
+        className="text-7xl mt-10 font-bold font-sen leading-10 "
         style={{ color: "#262626" }}
       >
         Quiz

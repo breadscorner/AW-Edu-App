@@ -35,7 +35,6 @@ export default function QuizStart() {
   };
 
   const handleTryAgain = () => {
-    // Reset the quiz
     setCurrentQuestionIndex(0);
     setSelectedAnswer(null);
     setIsWrongAnswer(false);
@@ -44,8 +43,10 @@ export default function QuizStart() {
   };
 
   if (quizComplete) {
-    // Calculate the score percentage
     const scorePercent = (correctAnswers / quizData.length) * 100;
+
+    const fixedContainerHeight = "h-1/2";
+
     return (
       <div
         className="results-container"
@@ -88,7 +89,6 @@ export default function QuizStart() {
         >
           Try Again
         </button>
-        {/* Render Navbar only if quiz is complete */}
         {quizComplete && <Navbar />}
       </div>
     );
@@ -101,30 +101,34 @@ export default function QuizStart() {
           <QuestionButton
             questionText={currentQuestion.question}
             href=""
-            className="top-0 text-2xl font-bold text-center text-blue-800 bg-transparent"
+            className=" text-4xl font-bold text-center text-black bg-transparent"
           />
           {Object.entries(currentQuestion.options).map(
             ([key, value], index) => {
               const isSelected = key === selectedAnswer;
               const isCorrectAnswer = key === currentQuestion.answer;
-              let buttonStyles = "flex items-center justify-center bg-blue-500 w-full text-lg h-20"; // Default button style
+              let buttonStyles =
+                "flex items-center text-white justify-center bg-dark-midnight-blue w-full h-full text-lg";
 
               if (isSelected) {
-                buttonStyles += isCorrectAnswer ? " bg-green-500" : " bg-red-500";
+                buttonStyles += isCorrectAnswer
+                  ? " bg-green-500"
+                  : " bg-red-500";
               }
 
               return (
-                <div key={index} className="mx-4 w-full relative">
+                <div key={index} className="w-full rounded">
                   <QuestionButton
                     questionText={value}
                     onClick={() => handleAnswerClick(key)}
-                    className={`rounded-full text-white font-semibold ${buttonStyles}`}
+                    className={`${buttonStyles}`}
                     href=""
                   />
                   {isSelected && (
                     <div
-                      className={`absolute -top-14 left-1/2 transform -translate-x-1/2 bg-white p-2 rounded-lg shadow-lg ${isWrongAnswer ? "text-red-500" : "text-green-500"
-                        }`}
+                      className={`absolute -top-14 left-1/2 transform -translate-x-1/2 bg-white p-2 rounded-lg shadow-lg ${
+                        isWrongAnswer ? "text-red-500" : "text-green-500"
+                      }`}
                     >
                       {isWrongAnswer ? "Wrong Answer" : "Correct!"}
                     </div>
@@ -134,7 +138,8 @@ export default function QuizStart() {
             }
           )}
         </div>
+        <Navbar />
       </main>
     </>
-  )
+  );
 }

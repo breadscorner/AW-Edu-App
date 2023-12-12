@@ -15,7 +15,7 @@ const QuestionButton: React.FC<QuestionButtonProps> = ({
   onClick,
   className,
 }) => {
-  const buttonClasses = `button-wrapper ${className} px-12 py-5 text-2xl rounded-xl`;
+  const buttonClasses = `button-wrapper ${className} px-12 py-5 rounded-full`;
 
   return (
     <Link href={href}>
