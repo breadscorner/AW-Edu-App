@@ -12,11 +12,11 @@ export default function Quiz() {
           backgroundColor: "rgba(255, 255, 255, 0.1)",
 
           opacity: 0.1,
-          zIndex: -1, 
+          zIndex: -1,
         }}
       />
       <h1
-        className="text-7xl mt-10 font-bold font-sen leading-10 "
+        className="text-4xl mt-10 font-bold font-sen leading-10 "
         style={{ color: "#262626" }}
       >
         Quiz

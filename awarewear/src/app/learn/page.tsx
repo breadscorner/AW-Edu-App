@@ -17,7 +17,7 @@ export default function Learn() {
         }}
       />
       <h1
-        className="text-4xl font-bold font-sen leading-10 "
+        className="text-4xl mt-10 font-bold font-sen leading-10 "
         style={{ color: "#262626" }}
       >
         Fast Fashion

@@ -96,19 +96,19 @@ export default function QuizStart() {
 
   return (
     <>
-      <main className="relative w-full h-screen bg-no-repeat bg-cover overflow-hidden">
-        <div className="relative z-10 flex flex-col items-center justify-center h-full space-y-4">
+      <main className="w-full h-full">
+        <div className="z-10 flex flex-col items-center justify-center  pt-20 pb-24 px-2 space-y-4">
           <QuestionButton
             questionText={currentQuestion.question}
             href=""
-            className=" text-4xl font-bold text-center text-black bg-transparent"
+            className=" text-2xl font-bold text-center text-black bg-transparent"
           />
           {Object.entries(currentQuestion.options).map(
             ([key, value], index) => {
               const isSelected = key === selectedAnswer;
               const isCorrectAnswer = key === currentQuestion.answer;
               let buttonStyles =
-                "flex items-center text-white justify-center bg-dark-midnight-blue w-full h-full text-lg";
+                "flex items-center text-white justify-center bg-dark-midnight-blue w-full h-full text-base";
 
               if (isSelected) {
                 buttonStyles += isCorrectAnswer
