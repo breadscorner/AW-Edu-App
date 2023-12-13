@@ -37,7 +37,7 @@ export default function MainButton({
 
         <div
           className={twMerge(
-            " flex w-full h-full rounded-3xl text-white",
+            " flex w-full h-full rounded-3xl items-center text-white",
             backgroundColor,
             imagePosition === "left" ? "justify-end" : "justify-start"
           )}
