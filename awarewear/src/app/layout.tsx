@@ -23,22 +23,21 @@ export default function RootLayout({
       <body
         className={twMerge(sen.className, "m-auto h-full max-w-md relative")}
       >
-        <header className="w-full h-16 bg-white absolute">
-          <Link href="/main">
-            <div className="flex justify-center items-center h-full px-4">
-              <div className="flex items-center">
+        <header className="w-full h-16  z-50 absolute">
+          <div className="flex justify-center items-center h-full px-4">
+            <div className="flex items-center justify-center">
+              <Link className="" href="/main">
                 <Image
                   src="/AW3.png"
                   alt="logo"
                   width={80}
                   height={80}
-                  className="w-16 h-16 mr-4"
+                  className="w-16 h-16"
                 />
-                <h1 className="text-2xl">AwareWear</h1>
-              </div>
-              <div className="w-16 h-16 invisible"></div>
+              </Link>
+              <h1 className="text-2xl mx-2">AwareWear</h1>
             </div>
-          </Link>
+          </div>
         </header>
         {children}
       </body>
