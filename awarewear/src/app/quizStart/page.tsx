@@ -5,6 +5,7 @@ import quizData from "./fastFashionQuiz.json";
 import Navbar from "@/components/Navbar";
 
 export default function QuizStart() {
+const bg = "url('/learnbg.png')";
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [isWrongAnswer, setIsWrongAnswer] = useState<boolean>(false);
@@ -58,6 +59,16 @@ export default function QuizStart() {
           height: "100vh", // Use the full height of the viewport
         }}
       >
+      <div
+        className="absolute top-0 left-0 w-full h-full bg-center bg-cover"
+        style={{
+          backgroundImage: bg,
+          backgroundColor: "rgba(255, 255, 255, 0.1)",
+          // transform: "rotate(-12.49deg)",
+          opacity: 0.05,
+          zIndex: -1, // To place the pseudo-element behind the content
+        }}
+      />
         <h1>Quiz Results</h1>
         <div
           className="results-text"
@@ -97,6 +108,16 @@ export default function QuizStart() {
   return (
     <>
       <main className="w-full h-full">
+      <div
+        className="absolute top-0 left-0 w-full h-full bg-center bg-cover"
+        style={{
+          backgroundImage: bg,
+          backgroundColor: "rgba(255, 255, 255, 0.1)",
+          // transform: "rotate(-12.49deg)",
+          opacity: 0.05,
+          zIndex: -1, // To place the pseudo-element behind the content
+        }}
+      />
         <div className="z-10 flex flex-col items-center justify-center  pt-20 pb-24 px-2 space-y-4">
           <QuestionButton
             questionText={currentQuestion.question}
